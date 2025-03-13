@@ -26,8 +26,14 @@ class ViewController: UIViewController {
         }
     }
  
+    /*
+     * ключ для сохранения истории в UserDefaults
+     */
     private let historyKey = "counterHistory"
     
+    /*
+     * массив для хранения истории изменений
+     */
     private var history: [String] = [] {
         didSet {
             UserDefaults.standard.set(history, forKey: historyKey)
@@ -81,7 +87,17 @@ class ViewController: UIViewController {
         let message = "[\(getCurrentDateTime())]: значение сброшено"
         updateHistory(with: message)
     }
-
+    
+    /*
+     * действие при нажатии на кнопку "корзина"
+     */
+    @IBAction func cleanRecordsBtnTapped(_ sender: UIButton) {
+        clearHistory()
+    }
+    
+    /*
+     * функция для обновления текстового поля с историей
+     */
     private func updateHistoryTextView() {
         changeHistoryTextView.text = history.joined(separator: "\n")
     }
@@ -97,6 +113,9 @@ class ViewController: UIViewController {
         changeHistoryTextView.scrollRangeToVisible(range)
     }
     
+    /*
+     * функция для загрузки истории изменений из UserDefaults
+     */
     private func loadHistory() {
         if let savedHistory = UserDefaults.standard.array(forKey: historyKey) as? [String] {
             history = savedHistory
@@ -104,6 +123,15 @@ class ViewController: UIViewController {
         else {
             history = ["История изменений: "]
         }
+    }
+    
+    /*
+     * функция очистки историй изменений
+     */
+    private func clearHistory() {
+        history = ["История изменений: "]
+        updateHistoryTextView()
+        UserDefaults.standard.removeObject(forKey: historyKey)
     }
     
     /*
