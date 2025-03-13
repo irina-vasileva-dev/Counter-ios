@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jhf-Ew-d7Z">
+                                <rect key="frame" x="0.0" y="0.0" width="406" height="852"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yra-Tt-F2N">
+                                <rect key="frame" x="46" y="159" width="301" height="250"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="0j0-By-Hfa"/>
+                                    <constraint firstAttribute="height" constant="250" id="aSh-CI-Sky"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-G2-6J0">
+                                <rect key="frame" x="65" y="668" width="100" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="7LP-Xs-rv9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="voO-tN-gfo"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.12300701529999999" blue="0.13762356510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="52"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="incrementBtnTapped:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GW-Bo-vwc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3f-Ag-DXa">
+                                <rect key="frame" x="235" y="668" width="100" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6Fq-S7-xcO"/>
+                                    <constraint firstAttribute="height" constant="75" id="Cup-Tm-Qb4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="52"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="decrementBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoO-U7-qmI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-i6-AWl">
+                                <rect key="frame" x="46" y="84" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="1Od-tb-Iey"/>
+                                    <constraint firstAttribute="height" constant="50" id="Shv-3U-EN3"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сброс">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="refreshBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0L9-Ey-Xkt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-RA-Nbp">
+                                <rect key="frame" x="0.0" y="429" width="393" height="130"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hFr-i6-AWl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2WD-b5-nQe"/>
+                            <constraint firstItem="jhf-Ew-d7Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="5fB-hR-0za"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bFk-G2-6J0" secondAttribute="bottom" constant="75" id="5yO-lB-Sgd"/>
+                            <constraint firstItem="bFk-G2-6J0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="D11-dR-LNo"/>
+                            <constraint firstItem="SKW-RA-Nbp" firstAttribute="centerX" secondItem="jhf-Ew-d7Z" secondAttribute="centerX" constant="-6.5" id="JRg-gL-cXQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H3f-Ag-DXa" secondAttribute="bottom" constant="75" id="N8b-bM-ofy"/>
+                            <constraint firstItem="SKW-RA-Nbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QWP-tb-U2d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H3f-Ag-DXa" secondAttribute="trailing" constant="58" id="VIY-iF-hea"/>
+                            <constraint firstItem="jhf-Ew-d7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W8G-RR-e10"/>
+                            <constraint firstItem="hFr-i6-AWl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Zex-wD-Zgp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hFr-i6-AWl" secondAttribute="trailing" constant="227" id="dV2-QW-l7m"/>
+                            <constraint firstItem="jhf-Ew-d7Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dk3-uV-ZX8"/>
+                            <constraint firstItem="H3f-Ag-DXa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bFk-G2-6J0" secondAttribute="trailing" constant="8" symbolic="YES" id="g65-Sy-RqM"/>
+                            <constraint firstItem="Yra-Tt-F2N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ob5-kf-Tqs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jhf-Ew-d7Z" secondAttribute="trailing" constant="-29" id="or2-RS-Quk"/>
+                            <constraint firstItem="SKW-RA-Nbp" firstAttribute="top" secondItem="Yra-Tt-F2N" secondAttribute="bottom" constant="20" id="qao-y6-2od"/>
+                            <constraint firstItem="Yra-Tt-F2N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ugA-2O-Nh2"/>
+                            <constraint firstItem="Yra-Tt-F2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="zAz-Z9-3yo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeHistoryTextView" destination="Yra-Tt-F2N" id="SOP-fQ-k9m"/>
+                        <outlet property="countNumberLabel" destination="SKW-RA-Nbp" id="r9L-wH-7or"/>
+                        <outlet property="decrementButton" destination="H3f-Ag-DXa" id="JAr-uD-acf"/>
+                        <outlet property="incrementButton" destination="bFk-G2-6J0" id="HSS-Vm-nIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MainBackground" width="3333" height="5000"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
