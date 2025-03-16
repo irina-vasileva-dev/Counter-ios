@@ -44,8 +44,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         incrementButton.setTitleColor(.white, for: .normal)
         incrementButton.backgroundColor = .red
+        incrementButton.layer.cornerRadius = 10
+        incrementButton.layer.masksToBounds = true
         decrementButton.setTitleColor(.white, for: .normal)
         decrementButton.backgroundColor = .systemBlue
+        decrementButton.layer.cornerRadius = 10
+        decrementButton.layer.cornerRadius = 10
         countNumberLabel.text = "0"
         loadHistory()
         updateHistoryTextView()
